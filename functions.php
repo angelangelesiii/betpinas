@@ -252,6 +252,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Custom Post Types
+ */
+// require get_template_directory() . '/cpt/cpt.php';
+
 
 // ===========================================
 // ACF Pro Options Page Instantiate
