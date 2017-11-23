@@ -43,6 +43,12 @@
         </article>
     <?php
             endwhile;
+            // End loop
+    ?>
+        <div class="load-more-potd">
+            
+        </div>
+    <?php
         else:
     ?>
         <span class="no-content">No content to show</span>
