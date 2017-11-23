@@ -34,6 +34,12 @@
     line-height: 1em;
     letter-spacing: 0.04em;
 }
+.headlines .headline-slider .headline .container h2.headline-title a,
+.headlines .headline-slider .headline .container h2.headline-title a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+}
 .headlines .headline-slider .headline .container p.headline-subtext {
     margin-bottom: 0;
 }

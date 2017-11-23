@@ -22,13 +22,15 @@
                     <div class="container">
                         <div class="text">
                             <h2 class="headline-title">
-                                <?php 
-                                if(get_sub_field('headline_title')): 
-                                    the_sub_field('headline_title');
-                                else:
-                                    echo get_the_title( $headlinePostID );
-                                endif;
-                                ?>
+                                <a href="<?php echo get_the_permalink( $headlinePostID ); ?>">
+                                    <?php 
+                                    if(get_sub_field('headline_title')): 
+                                        the_sub_field('headline_title');
+                                    else:
+                                        echo get_the_title( $headlinePostID );
+                                    endif;
+                                    ?>
+                                </a>
                             </h2>
                             
                             <?php if(get_sub_field('headline_subtext')): ?>
