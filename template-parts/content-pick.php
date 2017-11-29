@@ -41,12 +41,14 @@
 		</header>
 		<div class="content">
 			<?php the_content(); ?>
+			<?php if (get_field('pick_prediction')): ?>
 			<div class="prediction-container">
 				<h2>Prediction</h2>
 				<p class="prediction">
 					<?php the_field('pick_prediction'); ?>
 				</p>
 			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 
