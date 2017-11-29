@@ -467,7 +467,7 @@ body {
 	letter-spacing: 0.08em;
 }
 .article-container .article-proper {
-	padding: 10px 30px;
+	padding: 10px 30px 60px;
 }
 .article-container .article-proper .title {
 	font-family: 'Roboto Slab', serif;
@@ -497,6 +497,29 @@ body {
 }
 .article-container .article-proper p {
 	line-height: 1.8em;
+}
+
+/* prediction */
+.article-container .prediction-container h2 {
+	font-size: 2em;
+	margin-bottom: -25px;
+	position: relative;
+	z-index: 2;
+	color: #3A58A6;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding: 0 15px;
+}
+.article-container .prediction-container p.prediction {
+	margin: 0;
+	padding: 30px;
+	background-color: #ebebeb;
+	font-size: 1.3em;
+	font-style: italic;
+	font-weight: 700;
+	color: #6b6b6b;
+	border-radius: 10px;
+	letter-spacing: 0.03em;
 }
 
 
