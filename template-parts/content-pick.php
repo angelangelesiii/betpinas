@@ -41,6 +41,12 @@
 		</header>
 		<div class="content">
 			<?php the_content(); ?>
+			<div class="prediction-container">
+				<h2>Prediction</h2>
+				<p class="prediction">
+					<?php the_field('pick_prediction'); ?>
+				</p>
+			</div>
 		</div>
 	</div>
 
