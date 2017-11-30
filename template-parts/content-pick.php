@@ -40,6 +40,29 @@
 			</p>
 		</header>
 		<div class="content">
+			<div class="teams-container">
+				<?php if(pick_team_boolean): 
+				$imageSize = 'medium';
+				?>
+				<div class="team team-1 team-exists">
+					<div class="team-icon" style="background-image: url('<?php echo wp_get_attachment_image_url(get_field('team_logo', get_field('team_saved_1')), $imageSize); ?>');">
+					</div>
+					<span class="team-name"><?php echo get_the_title(get_field('team_saved_1')); ?></span>
+				</div>
+				<div class="divider"><p class="inner">VS</p></div>
+				<div class="team team-1 team-exists">
+					<div class="team-icon" style="background-image: url('<?php echo wp_get_attachment_image_url(get_field('team_logo', get_field('team_saved_2')), $imageSize); ?>');">
+					<?php wp_get_attachment ?>
+					</div>
+					<span class="team-name"><?php echo get_the_title(get_field('team_saved_2')); ?></span>
+				</div>
+				<?php endif; ?>
+				<?php if(get_field('pick_event_date_and_time')): ?>
+				<div class="event-date-time">
+					<p><?php the_field('pick_event_date_and_time'); ?></p>
+				</div>
+				<?php endif; ?>
+			</div>
 			<?php the_content(); ?>
 			<?php if (get_field('pick_prediction')): ?>
 			<div class="prediction-container">
