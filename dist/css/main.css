@@ -383,10 +383,10 @@ body {
 .generic-section .content article.post .article-read-button {
 	margin: 15px 0;
 }
-.generic-section .content article.post .article-read-button .btn-small {
+/* .generic-section .content article.post .article-read-button .btn-small {
 	background: #f0f0f0;
 	color: #a8a8a8;
-}
+} */
 .generic-section .content article.post .article-read-button .btn-small:hover {
 	background-color: #EF403B;
 	color: #ffffff;
