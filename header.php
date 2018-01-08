@@ -23,9 +23,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'betpinas' ); ?></a>
-
 	
-	<header class="site-header regular" id="mainheader">
+	<header class="site-header regular top-position" id="mainheader">
 		<div class="wrapper-big">
 			<nav class="site-nav clearfix">
 				<div class="logo-container">

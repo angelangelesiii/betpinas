@@ -115,6 +115,8 @@ body {
 	max-height: 24px;
 	display: block;
 	margin-top: 13px;
+	margin-bottom: 0;
+	transition: all 0.25s ease;
 }
 #mainheader .menu-container {
 	float: right;
@@ -140,9 +142,17 @@ body {
 	text-decoration: none;
 	padding: 15px 13px;
 	display: block;
+	transition: all 0.25s ease;
+}
+#mainheader.top-position .menu-container ul.menu li.menu-item a {
+	padding: 23px 13px;
 }
 #mainheader .menu-container ul.menu li.menu-item a:hover {
 	background: rgba(255, 255, 255, 0.25)
+}
+#top {
+	background-color: #124f78;
+	width: 100%;
 }
 
 
