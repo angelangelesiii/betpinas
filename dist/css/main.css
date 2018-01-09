@@ -292,11 +292,19 @@ body {
 /* ARCHIVE CONTAINER                         */
 /* ========================================= */
 
-.archive-container {
+.archive-container article.post {
 	background: #ffffff;
     color: #414141;
 	border: 1px solid #e4e4e4;
-	border-top: none;
+	margin-bottom: 15px;
+}
+.archive-container article.post .thumbnail {
+	padding-bottom: 50%;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+}
+.archive-container article.post .content {
 	padding: 30px;
 }
 .archive-container h1.post-title {

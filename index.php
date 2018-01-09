@@ -33,7 +33,10 @@ get_header(); ?>
 						?>
 						
 						<article class="post">
-							<h1 class="post-title"><?php the_title(); ?></h1>
+							<span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span>
+							<div class="content">
+								<h1 class="post-title"><?php the_title(); ?></h1>
+							</div>
 						</article>
 	
 						<?php
