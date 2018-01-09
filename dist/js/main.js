@@ -13,7 +13,7 @@ jQuery(document).ready(function($){ // Document Ready
 	var navScene = new ScrollMagic.Scene({
 		triggerElement: '#top',
 		triggerHook: 0,
-		offset: 150,
+		offset: 5,
 	})
 	.on('enter', function() { // if viewport moved by 50px, remove 'top-position' class
 		if($('#mainheader').hasClass('top-position')) {

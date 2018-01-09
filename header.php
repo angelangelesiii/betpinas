@@ -28,7 +28,10 @@
 		<div class="wrapper-big">
 			<nav class="site-nav clearfix">
 				<div class="logo-container">
-					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri().'/assets/logo/wordmark_w.png' ?>" alt="<?php echo bloginfo( 'name' ); ?>" class="logo"></a>
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri().'/assets/logo/wordmark_w.png' ?>" alt="<?php echo bloginfo( 'name' ); ?>" class="logo white">
+						<img src="<?php echo get_template_directory_uri().'/assets/logo/wordmark.png' ?>" alt="<?php echo bloginfo( 'name' ); ?>" class="logo colored">
+					</a>
 				</div>
 				<div class="menu-container">
 					<?php
