@@ -294,13 +294,14 @@ body {
 	margin-bottom: 15px;
 }
 .archive-container article.post .thumbnail {
-	padding-bottom: 50%;
+	padding-bottom: 40%;
 	background-size: cover;
 	background-position: center center;
 	display: block;
 }
 .archive-container article.post .content {
 	padding: 30px;
+	text-align: center;
 }
 .archive-container h1.post-title {
 	font-family: 'Roboto Slab', serif;

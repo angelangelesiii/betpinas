@@ -33,9 +33,12 @@ get_header(); ?>
 						?>
 						
 						<article class="post">
+							<?php if(has_post_thumbnail()): ?>
 							<span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span>
+							<?php endif; ?>
 							<div class="content">
 								<h1 class="post-title"><?php the_title(); ?></h1>
+								<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
 							</div>
 						</article>
 	
