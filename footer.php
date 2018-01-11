@@ -14,7 +14,16 @@
 	</div><!-- #content -->
 
 	<footer id="mainfooter" class="site-footer">
-			
+		<div class="logo-container">
+			<img src="<?php echo get_template_directory_uri().'/assets/logo/wordmark_g.png' ?>" alt="" class="logo">
+		</div>
+
+		<div class="footer-content">
+			<div class="wrapper-big no-pad pad-on-contact">
+				<p>&copy; <?php echo date('Y'); ?> BetPinas - website design by Angel Angeles III</p>
+			</div>
+		</div>
+
 		<nav class="footer-menu">
 			<div class="wrapper-big no-pad pad-on-contact">
 			<?php
@@ -25,11 +34,6 @@
 			?>
 			</div>
 		</nav>
-		<div class="footer-content">
-			<div class="wrapper-big no-pad pad-on-contact">
-				<p>&copy; <?php echo date('Y'); ?> BetPinas - website design by Angel Angeles III</p>
-			</div>
-		</div>
 		
 	</footer>
 </div>
