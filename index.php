@@ -39,6 +39,9 @@ get_header(); ?>
 							<div class="content">
 								<h1 class="post-title"><?php the_title(); ?></h1>
 								<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
+								<p>
+									<a href="<?php the_permalink() ?>" class="btn-large">Read More</a>
+								</p>
 							</div>
 						</article>
 	
