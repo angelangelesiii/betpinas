@@ -23,6 +23,7 @@ get_header(); ?>
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-7 small-12">
 					<?php get_template_part( 'fp-templates/left-column' ); ?>
+					<?php get_template_part( 'fp-templates/left-column-2' ); ?>
 				</div>
 				<div class="column large-5 small-12 right-section">
 				<?php get_template_part( 'fp-templates/potd' ); ?>

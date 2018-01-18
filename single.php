@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -28,6 +30,7 @@ get_header(); ?>
 						endif;
 			
 					endwhile; // End of the loop.
+					wpb_set_post_views(get_the_ID());
 					?>
 				</div>
 				<div class="column large-4 small-12">

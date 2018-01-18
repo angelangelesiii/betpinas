@@ -4,11 +4,7 @@
 <section class="latest-articles generic-section">
     <header class="section-header">
         <h2 class="section-title">
-            <?php if(get_field('fp_latest_post_header','options')): ?>
-            <?php the_field('fp_latest_post_header','options'); ?>
-            <?php else: ?>
-            Latest
-            <?php endif; ?>
+            Popular Posts
         </h2>
     </header>
 
@@ -19,7 +15,16 @@
         $postCount = get_field('fp_latest_post_count','options');
 		$args = array(
 			'post_type'				=> 'post',
-			'posts_per_page'		=> $postCount
+            'posts_per_page'		=> $postCount,
+            'date_query' => array(
+                array(
+                'after' => '-90 days',
+                'column' => 'post_date',
+                ),
+            ),
+            'meta_key' => 'wpb_post_views_count', 
+            'orderby' => 'meta_value_num', 
+            'order' => 'DESC'
         );
         
         // We'll create a new instance of WP_Query using $args.
@@ -61,11 +66,6 @@
     <?php
             endwhile;
     ?>  
-        <?php if(get_option('page_for_posts')): ?>
-        <p class="load-more-articles-link">
-            <a href="<?php echo get_permalink( get_option('page_for_posts') ); ?>">More articles <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-        </p>
-        <?php endif; ?>
     <?php
         endif;
         wp_reset_query();
