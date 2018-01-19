@@ -119,16 +119,16 @@
     position: absolute;
     right: 5px;
     z-index: 10;
-    background-color: rgba(239, 62, 59, 0.5);
+    background-color: rgba(239, 62, 59, 1);
     color: #ffffff;
     border: none;
-    border-radius: 0;
+    border-radius: 4px;
     outline: none;
     padding: 10px 15px;
     font-size: 1.1em;
 }
 .headlines nav.headline-slider-nav .carousel-button:hover {
-    background-color: #EF403B;
+    background-color: rgb(241, 121, 117);
 }
 .headlines nav.headline-slider-nav .carousel-button.prev {
     top: 5px;
