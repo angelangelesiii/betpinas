@@ -1,5 +1,5 @@
 
-<!-- Latest -->
+<!-- Pick of the Day -->
 
 <section class="potd generic-section">
     <header class="section-header">
