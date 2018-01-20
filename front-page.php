@@ -21,10 +21,11 @@ get_header(); ?>
 
 		<div class="wrapper-big no-pad pad-on-contact main-section clearfix">
 			<div class="row collapse large-collapse medium-collapse small-collapse">
-				<div class="column large-7 small-12">
+				<div class="column large-8 small-12">
 					<?php get_template_part( 'fp-templates/left-column' ); ?>
 					<?php get_template_part( 'fp-templates/left-column-2' ); ?>
 				</div>
+				<div class="column large-4 small-12 right-section">
 				<?php get_template_part( 'fp-templates/reviews' ); ?>
 				<?php get_template_part( 'fp-templates/potd' ); ?>
 					<?php //get_sidebar(); ?>
