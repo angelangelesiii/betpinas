@@ -1,5 +1,30 @@
 
-<!-- Latest -->
+<!-- Popular -->
+
+<?php 
+// This arguments will be the filter that we'll use for the custom WordPress loop query.
+$postCount = get_field('fp_popular_post_count','options');
+$args = array(
+    'post_type'				=> 'post',
+    'posts_per_page'		=> $postCount,
+    'date_query' => array(
+        array(
+        'after' => '-90 days',
+        'column' => 'post_date',
+        ),
+    ),
+    'meta_key' => 'wpb_post_views_count', 
+    'orderby' => 'meta_value_num', 
+    'order' => 'DESC'
+);
+
+// We'll create a new instance of WP_Query using $args.
+$popularPostsQuery = new WP_Query($args);
+
+// Loop through the query (looks like the regular WordPress loop from here on).
+if(($popularPostsQuery->have_posts()) && (get_field('show_popular_posts','options') == true)): 
+
+?>
 
 <section class="latest-articles generic-section">
     <header class="section-header">
@@ -11,30 +36,9 @@
     <div class="content">
     
     <?php 
-        // This arguments will be the filter that we'll use for the custom WordPress loop query.
-        $postCount = get_field('fp_latest_post_count','options');
-		$args = array(
-			'post_type'				=> 'post',
-            'posts_per_page'		=> $postCount,
-            'date_query' => array(
-                array(
-                'after' => '-90 days',
-                'column' => 'post_date',
-                ),
-            ),
-            'meta_key' => 'wpb_post_views_count', 
-            'orderby' => 'meta_value_num', 
-            'order' => 'DESC'
-        );
-        
-        // We'll create a new instance of WP_Query using $args.
-		$latestPostsQuery = new WP_Query($args);
-        
-        // Loop through the query (looks like the regular WordPress loop from here on).
-        if($latestPostsQuery->have_posts()): 
-            while($latestPostsQuery->have_posts()): $latestPostsQuery->the_post();
-            $category = get_the_category();
-            // output:
+        while($popularPostsQuery->have_posts()): $popularPostsQuery->the_post();
+        $category = get_the_category();
+        // output:
     ?>
         <article class="post post-<?php echo get_the_ID(); ?>  clearfix">
             <div class="image-container clearfix">
@@ -64,12 +68,13 @@
             </div>
         </article>
     <?php
-            endwhile;
+        endwhile;
     ?>  
-    <?php
-        endif;
-        wp_reset_query();
-    ?>
     
     </div>
 </section>
+
+<?php
+    endif;
+    wp_reset_query();
+?>
