@@ -101,16 +101,19 @@ body {
 /* ========================================= */
 
 #mainheader {
-	background-color: #6e8696;
+	/* background-color: #124f78; */
+	background: linear-gradient(rgb(18, 79, 120), rgba(18, 79, 120, 0.801));
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
 	transition: all 0.25s ease;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.314);
 }
 #mainheader.top-position {
-	background-color: transparent;
+	background: transparent;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
 }
 #mainheader .logo-container {
 	/* float: left; */
@@ -175,8 +178,12 @@ body {
 #mainheader.top-position .menu-container ul.menu > li.menu-item > a {
 	padding: 23px 13px;
 }
+#mainheader.top-position .menu-container ul.menu > li.menu-item:hover > a {
+	background: #124f78;
+	color: #FFFFFF;
+}
 #mainheader .menu-container ul.menu > li.menu-item:hover > a {
-	background: rgba(0, 0, 0, 0.25)
+	background: rgba(0, 0, 0, 0.25);
 }
 #mainheader .menu-container ul.menu > li.menu-item-has-children > a::after {
 	font-family: FontAwesome;
