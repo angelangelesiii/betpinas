@@ -25,7 +25,7 @@ get_header(); ?>
 					<?php get_template_part( 'fp-templates/left-column' ); ?>
 					<?php get_template_part( 'fp-templates/left-column-2' ); ?>
 				</div>
-				<div class="column large-5 small-12 right-section">
+				<?php get_template_part( 'fp-templates/reviews' ); ?>
 				<?php get_template_part( 'fp-templates/potd' ); ?>
 					<?php //get_sidebar(); ?>
 				</div>
