@@ -178,6 +178,14 @@ body {
 #mainheader .menu-container ul.menu > li.menu-item:hover > a {
 	background: rgba(0, 0, 0, 0.25)
 }
+#mainheader .menu-container ul.menu > li.menu-item-has-children > a::after {
+	font-family: FontAwesome;
+    content: '\f078';
+    margin-left: 10px;
+    font-size: 0.5em;
+    display: inline-block;
+    transform: translateY(-3px);
+}
 #mainheader .menu-container ul.menu > li.menu-item-has-children::before {
 	display: none;
 }
@@ -205,6 +213,8 @@ body {
 	border-radius: 4px;
 	margin-top: 10px;
 	padding: 15px 0;
+	text-align: left;
+	min-width: 300px;
 }
 #mainheader.top-position .menu-container ul.menu li.menu-item > .sub-menu {
 	margin-top: 7px;
