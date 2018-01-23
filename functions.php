@@ -301,6 +301,16 @@ if( function_exists('acf_add_options_page') ) {
 		'icon_url'		=> 'dashicons-star-filled',
 		'position'		=> '15'
 	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Philippine Bookmaker Reviews',
+		'menu_title'	=> 'PBR',
+		'menu_slug' 	=> 'pbr',
+		'capability'	=> 'publish_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-tickets-alt',
+		'position'		=> '20'
+	));
 	
 }
 

@@ -26,4 +26,15 @@ jQuery(document).ready(function($){ // Document Ready
 	// .addIndicators()
 	.addTo(mainController);
 
+
+	// PBR Tabs
+
+	$('.tabs .tab').click(function(e){
+		$('.tab.active').removeClass('active');
+		$('.tab-content.active').removeClass('active');
+		$(this).addClass('active');
+		var tabSection = '.tab-content#'+$(this).data('tab-section');
+		$(tabSection).addClass('active');
+	});
+
 });
