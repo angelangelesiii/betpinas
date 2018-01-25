@@ -13,7 +13,7 @@ jQuery(document).ready(function($){ // Document Ready
 	var navScene = new ScrollMagic.Scene({
 		triggerElement: '#top',
 		triggerHook: 0,
-		offset: 5,
+		offset: 15,
 	})
 	.on('enter', function() { // if viewport moved by 50px, remove 'top-position' class
 		if($('#mainheader').hasClass('top-position')) {
@@ -25,7 +25,19 @@ jQuery(document).ready(function($){ // Document Ready
 	})
 	// .addIndicators()
 	.addTo(mainController);
+	
+	// Mobile Menu Button
+	var mmb = $('#mainheader .menu-button');
+	mmb.click(function(e) {
+		mmb.toggleClass('menu-open');
+		$('#mobilemenupanel').toggleClass('menu-open');
+		$('.mobile-menu-overlay').toggleClass('menu-open');
+		$('body').toggleClass('menu-open');
+	})
 
+	$('.mobile-menu-overlay').click(function(e) {
+		mmb.click();
+	})
 
 	// PBR Tabs
 

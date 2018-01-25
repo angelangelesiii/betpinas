@@ -41,9 +41,19 @@
 						) );
 					?>
 				</div>
+				<div class="menu-button hide-for-large-only">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
 			</nav>
 		</div>
 	</header>
+
+	<div class="mobile-menu-panel hide-for-large-only" id="mobilemenupanel">
+		
+	</div>
+	<div class="mobile-menu-overlay"></div>
 			
 	<div id="top" class="spacer"></div>
 	
