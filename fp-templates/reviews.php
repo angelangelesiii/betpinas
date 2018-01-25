@@ -25,8 +25,18 @@
                         <h3 class="entry-title"><?php the_sub_field('title'); ?></h3>
                         <img class="entry-logo" src="<?php echo wp_get_attachment_image_url( get_sub_field('logo'), 'medium', false ) ?>" alt="">
                     </header>
-                    <div class="entry-content">
-                        <?php the_sub_field('text'); ?>
+                    <div class="entry-content clearfix">
+                        <div class="text-container">
+                            <?php the_sub_field('text'); ?>
+                            <div class="subtext"><?php the_sub_field('subtext'); ?></div>
+                        </div>
+                        <div class="btn-container">
+                            &nbsp;
+                            <a href="<?php the_sub_field('url') ?>" class="big-btn" target="_blank">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                <span class="btn-text">GO!</span>
+                            </a>
+                        </div>
                     </div>
                 </article>
             
