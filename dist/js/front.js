@@ -18,7 +18,18 @@ jQuery(document).ready(function($){ // Document Ready
         swipe: false,
         asNavFor: '.headlines .headline-slider-nav .nav-slider-container',
         prevArrow: '<button class="carousel-button prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>',
-		nextArrow: '<button class="carousel-button next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+        nextArrow: '<button class="carousel-button next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    draggable: true,
+                    swipe: true,
+                    fade: false,
+                }
+            }
+
+        ]
     });
 
     $('.headlines .headline-slider-nav .nav-slider-container').slick({
