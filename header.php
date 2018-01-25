@@ -41,7 +41,7 @@
 						) );
 					?>
 				</div>
-				<div class="menu-button hide-for-large-only">
+				<div class="menu-button hide-for-large">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
