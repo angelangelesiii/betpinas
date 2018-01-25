@@ -6,7 +6,7 @@
 
 jQuery(document).ready(function($){ // Document Ready
 
-	$('#top').outerHeight($('#mainheader').outerHeight());
+	// $('#top').outerHeight($('#mainheader').outerHeight());
 
 	var mainController = new ScrollMagic.Controller();
 

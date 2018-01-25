@@ -33,7 +33,7 @@
     ?>
         <article class="post post-<?php echo get_the_ID(); ?>  clearfix">
             <div class="image-container clearfix">
-                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'bp-thumbnail' ); ?>" alt="<?php the_title(); ?>" class="article-thumbnail">
+                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium-600-sq' ); ?>" alt="<?php the_title(); ?>" class="article-thumbnail">
             </div>
             <div class="text-container clearfix">
                 <header class="article-header">

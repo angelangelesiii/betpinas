@@ -80,6 +80,7 @@ if ( ! function_exists( 'betpinas_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'medium-600', 600, 600);
+		add_image_size( 'medium-600-sq', 600, 600, true);
 		add_image_size( 'extra-large', 1400, 900);
 		add_image_size( 'bp-thumbnail', 250, 250, true);
 
