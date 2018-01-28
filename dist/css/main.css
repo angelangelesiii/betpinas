@@ -264,7 +264,7 @@ body {
 	padding: 10px 25px;
 	text-decoration: none;
 }
-#top {
+.spacer {
 	/* background-color: #124f78; */
 	width: 100%;
 	height: 67px;
@@ -330,6 +330,9 @@ body {
 /* Mobile Menu */
 #mobilemenupanel.menu-open {
 	left: 0;
+}
+#mobilemenupanel {
+	left: -100%;
 	width: 80%;
 	max-width: 420px;
 	background: #FFFFFF;
@@ -343,8 +346,34 @@ body {
 	-ms-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 }
-#mobilemenupanel {
-	left: -100%;
+#mobilemenupanel .mobile-menu-container {
+	margin: 15px 0 0;
+}
+#mobile-menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#mobile-menu ul {
+	list-style-type: none;
+}
+#mobile-menu .menu-item a:link,
+#mobile-menu .menu-item a:visited {
+	display: block;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: rgb(110, 110, 110);
+	font-weight: 700;
+	letter-spacing: 0.09em;
+}
+#mobile-menu .menu-item .sub-menu {
+	margin: 0;
+	padding: 0;
+}
+#mobile-menu .menu-item .sub-menu li a {
+	padding: 10px 15px 0 30px;
+	text-transform: none;
 }
 .mobile-menu-overlay.menu-open {
 	position: fixed;
@@ -978,7 +1007,7 @@ SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
 	#mainheader.top-position,
-	#top {
+	.spacer {
 		height: 48px !important;
 	}
 	#mainheader .logo-container .logo {

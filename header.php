@@ -52,8 +52,16 @@
 		</div>
 	</header>
 
-	<div class="mobile-menu-panel hide-for-large-only" id="mobilemenupanel">
-		
+	<div class="mobile-menu-panel hide-for-large" id="mobilemenupanel">
+		<div class="spacer"></div>
+		<div class="mobile-menu-container">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'header-menu-1',
+					'menu_id'        => 'mobile-menu',
+				) );
+			?>
+		</div>
 	</div>
 	<div class="mobile-menu-overlay"></div>
 			
