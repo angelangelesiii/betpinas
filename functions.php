@@ -162,6 +162,15 @@ function betpinas_widgets_init() {
 		'before_title'  => '<header class="widget-header"><h2 class="widget-title">',
 		'after_title'   => '</h2></header><div class="widget-content">',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Mobile Menu Panel', 'betpinas' ),
+		'id'            => 'sidebar-mobile',
+		'description'   => esc_html__( 'Sidebar for widgets to be placed in the mobile menu panel (if set in site options).', 'betpinas' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div></section>',
+		'before_title'  => '<header class="widget-header"><h2 class="widget-title">',
+		'after_title'   => '</h2></header><div class="widget-content">',
+	) );
 }
 add_action( 'widgets_init', 'betpinas_widgets_init' );
 
