@@ -16,7 +16,6 @@ get_header(); ?>
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-8 small-12">
 				<?php if (have_posts()): ?>
-					<h1 class="main-archive-header"><?php echo get_the_title(); ?></h1>
 					<?php 
 					the_archive_title( '<h1 class="main-archive-header">', '</h1>' );
 					?>
@@ -52,8 +51,7 @@ get_header(); ?>
 	
 						<?php
 						endwhile; // End of the loop.
-	
-						the_posts_navigation();
+						the_posts_pagination( array( 'mid_size' => 2 ) );
 						?>
 					</section>
 				<?php else: // If there are no posts ?>
