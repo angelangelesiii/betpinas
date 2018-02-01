@@ -49,9 +49,13 @@ get_header(); ?>
 	
 						<?php
 						endwhile; // End of the loop.
-						the_posts_pagination( array( 'mid_size' => 2 ) );
 						?>
 					</section>
+					<?php the_posts_pagination( array( 
+						'mid_size' => 3,
+						'prev_text' => __( 'Newer', 'textdomain' ),
+    					'next_text' => __( 'Older', 'textdomain' ),
+						) ); ?>
 				<?php else: // If there are no posts ?>
 				<!-- NO POSTS -->
 				<?php endif; ?>
