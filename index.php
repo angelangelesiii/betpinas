@@ -18,9 +18,9 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 		<div class="wrapper-big no-pad pad-on-contact clearfix">
-			
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-8 small-12">
+				<?php if (have_posts()): ?>
 					<h1 class="main-archive-header">Latest Posts</h1>
 					<section class="article-archive-container archive-container row collapse medium-up-2 small-up-1">
 						<?php
@@ -58,6 +58,9 @@ get_header(); ?>
 						the_posts_navigation();
 						?>
 					</section>
+				<?php else: // If there are no posts ?>
+				<!-- NO POSTS -->
+				<?php endif; ?>
 				</div>
 				<div class="column large-4 small-12">
 					<div class="sidebar-container article-sidebar">
