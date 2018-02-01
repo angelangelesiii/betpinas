@@ -1,6 +1,10 @@
 <?php
 /**
- * Template Name: Archive Page
+ * The template for displaying archive pages
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package BetPinas_Theme
  */
 
 get_header(); ?>
@@ -12,7 +16,7 @@ get_header(); ?>
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-8 small-12">
 				<?php if (have_posts()): ?>
-					<h1 class="main-archive-header"><?php the_title(); ?></h1>
+					<h1 class="main-archive-header">Daily Picks</h1>
 					<section class="article-archive-container archive-container row collapse medium-up-2 small-up-1">
 						<?php
 						while ( have_posts() ) : the_post();
@@ -37,7 +41,7 @@ get_header(); ?>
 										<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
 									</p>
 									<p class="button-container">
-										<a href="<?php the_permalink() ?>" class="btn-large">Read More</a>
+										<a href="<?php the_permalink() ?>" class="btn-large">View Prediction</a>
 									</p>
 								</div>
 							</article>
@@ -45,8 +49,7 @@ get_header(); ?>
 	
 						<?php
 						endwhile; // End of the loop.
-	
-						the_posts_navigation();
+						the_posts_pagination( array( 'mid_size' => 2 ) );
 						?>
 					</section>
 				<?php else: // If there are no posts ?>
