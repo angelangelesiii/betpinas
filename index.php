@@ -18,9 +18,11 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 		<div class="wrapper-big no-pad pad-on-contact clearfix">
+			
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-8 small-12">
-					<section class="article-archive-container archive-container">
+					<h1 class="main-archive-header">Latest Posts</h1>
+					<section class="article-archive-container archive-container row collapse medium-up-2 small-up-1">
 						<?php
 						while ( have_posts() ) : the_post();
 				
@@ -32,18 +34,23 @@ get_header(); ?>
 							// endif;
 						?>
 						
-						<article class="post">
-							<?php if(has_post_thumbnail()): ?>
-							<span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span>
-							<?php endif; ?>
-							<div class="content">
-								<h1 class="post-title"><?php the_title(); ?></h1>
-								<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
-								<p>
-									<a href="<?php the_permalink() ?>" class="btn-large">Read More</a>
-								</p>
-							</div>
-						</article>
+						<div class="post-column column-block column">
+							<article class="post">
+								<?php if(has_post_thumbnail()): ?>
+								<span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span>
+								<?php endif; ?>
+								<div class="content">
+									<h1 class="post-title"><?php the_title(); ?></h1>
+									<p class="meta">Posted on <?php the_date(); ?></p>
+									<p class="excerpt">
+										<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
+									</p>
+									<p class="button-container">
+										<a href="<?php the_permalink() ?>" class="btn-large">Read More</a>
+									</p>
+								</div>
+							</article>
+						</div>
 	
 						<?php
 						endwhile; // End of the loop.
