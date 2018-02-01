@@ -54,8 +54,7 @@ get_header(); ?>
 	
 						<?php
 						endwhile; // End of the loop.
-	
-						the_posts_navigation();
+						the_posts_pagination( array( 'mid_size' => 2 ) );
 						?>
 					</section>
 				<?php else: // If there are no posts ?>
