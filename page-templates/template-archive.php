@@ -1,10 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package BetPinas_Theme
+ * Template Name: Archive Page
  */
 
 get_header(); ?>
@@ -16,10 +12,7 @@ get_header(); ?>
 			<div class="row collapse large-collapse medium-collapse small-collapse">
 				<div class="column large-8 small-12">
 				<?php if (have_posts()): ?>
-					<h1 class="main-archive-header"><?php echo get_the_title(); ?></h1>
-					<?php 
-					the_archive_title( '<h1 class="main-archive-header">', '</h1>' );
-					?>
+					<h1 class="main-archive-header"><?php the_title(); ?></h1>
 					<section class="article-archive-container archive-container row collapse medium-up-2 small-up-1">
 						<?php
 						while ( have_posts() ) : the_post();
