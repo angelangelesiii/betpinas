@@ -944,6 +944,19 @@ body.menu-open {
 .article-container .article-proper {
 	padding: 10px 30px 60px;
 }
+.article-container .title.page-title {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2.5em;
+	font-weight: 400;
+	color: #FFF;
+	margin: 10px 30px 25px;
+	line-height: 1.3em;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	max-width: 700px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
 .article-container .article-proper .title {
 	font-family: 'Roboto Slab', serif;
 	font-size: 2.1em;
@@ -972,6 +985,13 @@ body.menu-open {
 }
 .article-container .article-proper p {
 	line-height: 1.8em;
+}
+.article-container .banner-photo {
+	padding-bottom: 50%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
 }
 
 /* pick */
