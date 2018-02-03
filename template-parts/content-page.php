@@ -15,7 +15,7 @@
 	</div>
 	<div class="article-proper">
 		<header class="article-header">
-			
+			<?php if(get_field('show_page_meta')): ?>
 			<p class="meta">
 				<span class="author-category">
 					Posted by <?php if(get_the_author_firstname()) echo "<span class='a_name'>".get_the_author_firstname()."</span>"; if(get_the_author_lastname()) echo " <span class='a_name'>".get_the_author_lastname()."</span>"; ?><?php if(get_the_terms( $post->ID, 'sport') ): ?> in
@@ -27,6 +27,7 @@
 				</span>
 				<span class="date"><?php the_date(); ?></span>
 			</p>
+			<?php endif; ?>
 			<?php edit_post_link( 'Edit this page' ); ?> 
 		</header>
 		<div class="content">
