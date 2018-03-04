@@ -36,6 +36,7 @@ get_header(); ?>
 				<div class="column large-4 small-12">
 					<div class="sidebar-container article-sidebar">
 						<?php get_sidebar('2'); ?>
+						<?php get_template_part( 'fp-templates/reviews' ); ?>
 					</div>
 				</div>
 			</div>
