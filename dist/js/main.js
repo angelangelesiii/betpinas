@@ -32,6 +32,7 @@ jQuery(document).ready(function($){ // Document Ready
 		mmb.toggleClass('menu-open');
 		$('#mobilemenupanel').toggleClass('menu-open');
 		$('.mobile-menu-overlay').toggleClass('menu-open');
+		$('#mainheader').toggleClass('menu-open');
 		$('body').toggleClass('menu-open');
 	})
 
