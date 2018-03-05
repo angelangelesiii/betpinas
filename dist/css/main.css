@@ -555,7 +555,15 @@ body.menu-open {
     font-size: 1.5em;
     font-weight: 400;
     margin: 10px 0 0;
-    line-height: 1.3em;
+	line-height: 1.3em;
+	/* color: #000000; */
+	text-decoration: none;
+}
+.archive-container h1.post-title a:link,
+.archive-container h1.post-title a:visited,
+.archive-container h1.post-title a:hover {
+	color: #414141;
+	text-decoration: none;
 }
 .archive-container .excerpt {
 	font-size: 0.9em;

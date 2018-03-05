@@ -32,10 +32,10 @@ get_header(); ?>
 						<div class="post-column column-block column">
 							<article class="post">
 								<?php if(has_post_thumbnail()): ?>
-								<span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span>
+								<a href="<?php the_permalink(); ?>"><span class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'extra-large') ?>')"></span></a>
 								<?php endif; ?>
 								<div class="content">
-									<h1 class="post-title"><?php the_title(); ?></h1>
+									<h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 									<p class="meta">Posted on <?php the_date(); ?></p>
 									<p class="excerpt">
 										<?php echo wp_trim_words( get_the_excerpt(), 45, ' <span class=\'ellipsis\'>...</span>' ); ?>
